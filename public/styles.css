@@ -3,10 +3,16 @@
 ::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: "'Audiowide', cursive";
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+body {
+  background-color: lightblue;
 }
 
 a,
@@ -16,11 +22,6 @@ a,
 :visited {
   text-decoration: none;
   color: #000;
-}
-
-.logo {
-  width: 200px;
-  height: 100px;
 }
 
 .main-header {
@@ -33,5 +34,9 @@ a,
 
 .main-header__buttons {
   display: flex;
-  gap: 40px;
+  gap: 20px;
+}
+
+.buttons-header {
+  color: #fff;
 }
