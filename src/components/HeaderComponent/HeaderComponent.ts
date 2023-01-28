@@ -12,6 +12,7 @@ export class HeaderComponent
 
   render() {
     super.render();
-    this.element.innerHTML = `${logo}`;
+    this.element.innerHTML = `${logo}
+    <div class="main-header__buttons buttons"></div>`;
   }
 }
