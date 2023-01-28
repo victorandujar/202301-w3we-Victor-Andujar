@@ -5,8 +5,8 @@ class Component implements ComponentStructure {
 
   constructor(
     public readonly parentElement: Element,
-    className: string,
-    tag = "div"
+    className = "",
+    tag = ""
   ) {
     this.element = document.createElement(tag);
     this.element.className = className;

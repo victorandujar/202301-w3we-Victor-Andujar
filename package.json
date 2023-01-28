@@ -29,5 +29,9 @@
     "prettier": "^2.8.3",
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@expo-google-fonts/audiowide": "^0.2.2",
+    "typeface-audiowide": "^1.1.13"
   }
 }
