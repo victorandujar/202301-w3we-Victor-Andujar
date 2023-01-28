@@ -5,9 +5,9 @@ import getPokemons from "./data/data.js";
 const urlApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150";
 await getPokemons(urlApi);
 
-const a = document.querySelector(".root");
+const rootContainer = document.querySelector(".root");
 
-const pageContainer = new PageComponent(a);
+const pageContainer = new PageComponent(rootContainer);
 pageContainer.render();
 
 const headerContainer = new HeaderComponent(pageContainer.element);
