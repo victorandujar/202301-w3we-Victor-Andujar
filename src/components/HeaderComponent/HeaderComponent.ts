@@ -1,5 +1,4 @@
 import Component from "../Component/Component.js";
-import { logo } from "./logo.js";
 import type { HeaderComponentStructure } from "./types.js";
 
 export class HeaderComponent
@@ -12,7 +11,6 @@ export class HeaderComponent
 
   render() {
     super.render();
-    this.element.innerHTML = `${logo}
-    <div class="main-header__buttons buttons"></div>`;
+    this.element.innerHTML = `<img src="pokemon-logo.svg">`;
   }
 }
