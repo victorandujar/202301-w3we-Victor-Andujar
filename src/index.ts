@@ -1,3 +1,4 @@
+import { CardComponent } from "./components/CardComponent/CardComponent.js";
 import { CardContainer } from "./components/CardContainerComponent/CardContainerComponent.js";
 import { HeaderButtons } from "./components/HeaderComponent/HeaderButtons/HeaderButtons.js";
 import { HeaderComponent } from "./components/HeaderComponent/HeaderComponent.js";

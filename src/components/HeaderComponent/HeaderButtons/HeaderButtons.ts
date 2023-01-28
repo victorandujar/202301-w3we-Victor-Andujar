@@ -3,7 +3,7 @@ import type ComponentStructure from "../../types.js";
 
 export class HeaderButtons extends Component implements ComponentStructure {
   constructor(parentElement: Element) {
-    super(parentElement, "maind-header__buttons buttons", "div");
+    super(parentElement, "main-header__buttons buttons", "div");
   }
 
   render() {
