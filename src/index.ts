@@ -1,10 +1,14 @@
+import { HeaderComponent } from "./components/HeaderComponent/HeaderComponent.js";
 import { PageComponent } from "./components/PageComponent/PageComponent.js";
 import getPokemons from "./data/data.js";
 
 const urlApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150";
-const data = getPokemons(urlApi);
+await getPokemons(urlApi);
 
-const parentElement = document.querySelector(".root");
+const a = document.querySelector(".root");
 
-const pageContainer = new PageComponent(parentElement);
+const pageContainer = new PageComponent(a);
 pageContainer.render();
+
+const headerContainer = new HeaderComponent(pageContainer.element);
+headerContainer.render();
