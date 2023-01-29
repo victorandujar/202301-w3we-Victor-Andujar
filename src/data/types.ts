@@ -5,9 +5,16 @@ export interface PokemonInfoStructure {
   id: number;
   sprites: {
     other: {
-      "official-artwork": {
+      dream_world: {
         front_default: string;
       };
     };
   };
+  abilities: [
+    {
+      ability: {
+        name: string;
+      };
+    }
+  ];
 }
