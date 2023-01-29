@@ -16,7 +16,7 @@ export class CardComponent extends Component implements ComponentStructure {
           <img class="card__image" src="${this.pokemon.sprites.other.dream_world.front_default}"
           alt="Pokemon image" width="100" height="100">
           <h2 class="card__name">${this.pokemon.name}</h2>
-          <div class="" card__text-data>
+          <div class="card__text-data">
             <span>Height: ${this.pokemon.height}</span>
             <span>Weight: ${this.pokemon.weight}</span>
           </div>
