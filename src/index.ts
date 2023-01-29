@@ -4,7 +4,7 @@ import { HeaderComponent } from "./components/HeaderComponent/HeaderComponent.js
 import { PageComponent } from "./components/PageComponent/PageComponent.js";
 import getPokemons from "./data/data.js";
 
-export const pokemons: any[] = await getPokemons(151);
+export const pokemons: any[] = await getPokemons(150);
 
 const rootContainer = document.querySelector(".root");
 

@@ -1,22 +1,21 @@
 import { CardComponent } from "../CardComponent/CardComponent.js";
 import Component from "../Component/Component.js";
-import type ComponentStructure from "../Component/types";
 import { pokemons } from "../../index.js";
 
-export class CardsContainer extends Component implements ComponentStructure {
+export class CardsContainer extends Component {
   pokemons: any[];
 
   constructor(parentElement: Element) {
-    super(parentElement, "cards-container", "div");
+    super(parentElement, "cards-container", "ul");
     this.pokemons = pokemons;
   }
 
   render() {
     super.render();
 
-    this.element.innerHTML = `<ul class="cards-container cards">
-          ${this.pokemons.map(() => '<li class="card"></li>').join("")}</ul>)}
-            </ul>`;
+    this.element.innerHTML = `${this.pokemons
+      .map(() => '<li class="card"></li>')
+      .join("")}`;
 
     this.element
       .querySelectorAll(".card")

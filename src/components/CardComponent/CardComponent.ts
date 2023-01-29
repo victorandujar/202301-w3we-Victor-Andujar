@@ -6,7 +6,7 @@ export class CardComponent extends Component implements ComponentStructure {
   pokemon: PokemonInfoStructure;
 
   constructor(parentElement: Element, pokemon: PokemonInfoStructure) {
-    super(parentElement, "cards", "article");
+    super(parentElement, "card", "article");
     this.pokemon = pokemon;
   }
 
