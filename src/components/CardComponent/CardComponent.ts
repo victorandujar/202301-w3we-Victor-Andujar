@@ -1,22 +1,27 @@
 import type ComponentStructure from "../Component/types";
 import Component from "../Component/Component.js";
+import type { PokemonInfoStructure } from "../../data/types";
 
 export class CardComponent extends Component implements ComponentStructure {
-  constructor(parentElement: Element) {
+  pokemon: PokemonInfoStructure;
+
+  constructor(parentElement: Element, pokemon: PokemonInfoStructure) {
     super(parentElement, "cards", "article");
+    this.pokemon = pokemon;
   }
 
   render() {
+    super.render();
     this.element.innerHTML = `
-          <img class="card__image" src="https://i.pinimg.com/564x/34/26/49/342649651ff0985eb72071d26d34a261.jpg"
+          <img class="card__image" src="${this.pokemon.sprites.other.dream_world.front_default}"
           alt="Pokemon image" width="100" height="100">
-          <h2 class="card__name">Charmandier</h2>
+          <h2 class="card__name">${this.pokemon.name}</h2>
           <div class="" card__text-data>
-            <span>Data 1</span>
-            <span>Data 2</span>
+            <span>${this.pokemon.height}</span>
+            <span>${this.pokemon.weight}</span>
           </div>
           <div class="card__text-data">
-            <span>Data 3</span>
+            <span></span>
             <span>Data 4</span>
           </div>
           `;

@@ -1,12 +1,22 @@
 import type { PokemonInfoStructure } from "./types";
 
 const urlApi = "https://pokeapi.co/api/v2/pokemon/";
+const getPokemons = async (
+  idPokemonUser: number
+): Promise<PokemonInfoStructure[]> => {
+  const pokemons = [];
+  for (let position = 1; position <= idPokemonUser; position++) {
+    const pokemon = fetch(`${urlApi}${position}`);
+    pokemons.push(pokemon);
+  }
 
-const getPokemons = async (idPokemonUser: number): Promise<string> => {
-  const response = await fetch(`${urlApi}${idPokemonUser}`);
-  const dataResponse = (await response.json()) as PokemonInfoStructure;
+  const unresolvedRsponse = await Promise.all(pokemons);
+  const resolvedInfo = unresolvedRsponse.map(async (pokemon) => pokemon.json());
+  const allPokemons = (await Promise.all(
+    resolvedInfo
+  )) as PokemonInfoStructure[];
 
-  return dataResponse.sprites.other["official-artwork"].front_default;
+  return allPokemons;
 };
 
 export default getPokemons;
