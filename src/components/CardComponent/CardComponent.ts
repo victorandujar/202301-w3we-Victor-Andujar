@@ -20,8 +20,8 @@ export class CardComponent extends Component implements ComponentStructure {
             <span>Height: ${this.pokemon.height}</span>
             <span>Weight: ${this.pokemon.weight}</span>
           </div>
-          <div class="card__text-data">
             <span>Ability: ${this.pokemon.abilities[0].ability.name}</span>
+            <span>Type: ${this.pokemon.types[0].type.name}</span>
           </div>
           `;
   }

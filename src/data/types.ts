@@ -17,4 +17,11 @@ export interface PokemonInfoStructure {
       };
     }
   ];
+  types: [
+    {
+      type: {
+        name: string;
+      };
+    }
+  ];
 }
