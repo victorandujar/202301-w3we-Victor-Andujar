@@ -17,12 +17,11 @@ export class CardComponent extends Component implements ComponentStructure {
           alt="Pokemon image" width="100" height="100">
           <h2 class="card__name">${this.pokemon.name}</h2>
           <div class="" card__text-data>
-            <span>${this.pokemon.height}</span>
-            <span>${this.pokemon.weight}</span>
+            <span>Height: ${this.pokemon.height}</span>
+            <span>Weight: ${this.pokemon.weight}</span>
           </div>
           <div class="card__text-data">
-            <span></span>
-            <span>Data 4</span>
+            <span>Ability: ${this.pokemon.abilities[0].ability.name}</span>
           </div>
           `;
   }

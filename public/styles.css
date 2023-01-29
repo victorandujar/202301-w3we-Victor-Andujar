@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 html {
   font-family: monospace;
   font-size: 1rem;
@@ -39,4 +44,12 @@ a,
 
 .buttons-header {
   color: #fff;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
 }

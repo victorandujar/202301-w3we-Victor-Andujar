@@ -1,4 +1,3 @@
-import type { PokemonInfoStructure } from "../../data/types.js";
 import { CardComponent } from "../CardComponent/CardComponent.js";
 import Component from "../Component/Component.js";
 import type ComponentStructure from "../Component/types";
