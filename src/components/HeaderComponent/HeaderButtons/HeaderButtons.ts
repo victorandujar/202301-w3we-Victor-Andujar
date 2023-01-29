@@ -10,6 +10,6 @@ export class HeaderButtons extends Component implements ComponentStructure {
     super.render();
     this.element.innerHTML = `
     <a href="#" class="buttons-header">Home</a>
-    <a href="#" class="buttons-header">Favs</a>`;
+    <a href="#" class="buttons-header">Favourites</a>`;
   }
 }

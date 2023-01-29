@@ -11,6 +11,6 @@ export class HeaderComponent
 
   render() {
     super.render();
-    this.element.innerHTML = `<img src="pokemon-logo.svg" alt"Pokemon logo" height="100" width="150">`;
+    this.element.innerHTML = `<img src="pokemon-logo.svg" alt"Pokemon logo" height="100" width="150" class="header-logo">`;
   }
 }
