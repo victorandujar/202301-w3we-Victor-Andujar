@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: lightblue;
+  background-color: rgb(53, 147, 255);
 }
 
 a,
@@ -26,7 +26,20 @@ a,
 :focus,
 :visited {
   text-decoration: none;
-  color: #000;
+}
+
+button:hover {
+  color: rgb(53, 147, 255);
+  background-color: rgb(255, 221, 0);
+}
+
+button:active {
+  background-color: red;
+  color: #fff;
+}
+
+.root {
+  padding: 20px 80px;
 }
 
 .main-header {
@@ -45,7 +58,7 @@ a,
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  padding: 30px;
+  padding: 60px 0;
 }
 
 .card {
@@ -67,11 +80,30 @@ a,
   width: 70px;
 }
 
-@media (min-width: 600px) {
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 60px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.footer-content__button {
+  border: none;
+  border-radius: 10px;
+  width: 80px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+@media (min-width: 700px) {
   .main-header {
     flex-direction: row;
     height: 100px;
-    padding: 60px 90px;
+    padding: 60px 60px;
   }
 
   .main-header__buttons {
@@ -80,7 +112,7 @@ a,
   }
 
   .buttons-header {
-    color: rgb(21, 105, 249);
+    color: rgb(255, 255, 255);
     font-size: 1.2rem;
   }
 
@@ -89,7 +121,6 @@ a,
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    padding: 50px;
   }
 
   .card {
@@ -102,7 +133,7 @@ a,
     justify-content: center;
     align-items: center;
     gap: 5px;
-    box-shadow: rgb(62, 62, 62) 10px 7px 15px;
+    box-shadow: rgb(0, 0, 0) 10px 7px 20px;
     font-size: 1rem;
   }
 
@@ -114,5 +145,9 @@ a,
   .header-logo {
     height: 150px;
     width: 200px;
+  }
+
+  .footer-content {
+    padding: 70px;
   }
 }
