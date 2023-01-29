@@ -77,6 +77,12 @@ button:active {
   font-size: 0.5rem;
 }
 
+.card:hover {
+  background-color: white;
+  transform: translate(5px);
+  cursor: pointer;
+}
+
 .card__text-data {
   display: flex;
   gap: 30px;
