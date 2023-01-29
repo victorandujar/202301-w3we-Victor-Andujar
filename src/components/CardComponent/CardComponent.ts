@@ -1,4 +1,4 @@
-import type ComponentStructure from "../types";
+import type ComponentStructure from "../Component/types";
 import Component from "../Component/Component.js";
 
 export class CardComponent extends Component implements ComponentStructure {

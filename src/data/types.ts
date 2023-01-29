@@ -1,7 +1,13 @@
-export interface PokemonDataStructure {
-  results: PokemonInfo[];
-}
-export interface PokemonInfo {
+export interface PokemonInfoStructure {
   name: string;
-  url: string;
+  weight: string;
+  height: string;
+  id: number;
+  sprites: {
+    other: {
+      "official-artwork": {
+        front_default: string;
+      };
+    };
+  };
 }
