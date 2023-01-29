@@ -1,4 +1,4 @@
-import type ComponentStructure from "../types.js";
+import type ComponentStructure from "../Component/types.js";
 
 export interface HeaderComponentStructure extends ComponentStructure {
   element: Element;

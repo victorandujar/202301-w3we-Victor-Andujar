@@ -1,12 +1,10 @@
-import { CardComponent } from "./components/CardComponent/CardComponent.js";
-import { CardContainer } from "./components/CardContainerComponent/CardContainerComponent.js";
+import { CardsContainer } from "./components/CardsContainerComponent/CardContainerComponent.js";
 import { HeaderButtons } from "./components/HeaderComponent/HeaderButtons/HeaderButtons.js";
 import { HeaderComponent } from "./components/HeaderComponent/HeaderComponent.js";
 import { PageComponent } from "./components/PageComponent/PageComponent.js";
 import getPokemons from "./data/data.js";
 
-const urlApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150";
-await getPokemons(urlApi);
+await getPokemons(7);
 
 const rootContainer = document.querySelector(".root");
 
@@ -19,5 +17,5 @@ headerContainer.render();
 const button = new HeaderButtons(headerContainer.element);
 button.render();
 
-const cardsContainer = new CardContainer(pageContainer.element);
+const cardsContainer = new CardsContainer(pageContainer.element);
 cardsContainer.render();

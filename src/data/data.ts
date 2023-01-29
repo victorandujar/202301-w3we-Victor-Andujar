@@ -1,10 +1,12 @@
-import { type PokemonDataStructure } from "./types";
+import type { PokemonInfoStructure } from "./types";
 
-const getPokemons = async (urlApi: string): Promise<any[]> => {
-  const response = await fetch(urlApi);
-  const dataResponse = (await response.json()) as PokemonDataStructure;
+const urlApi = "https://pokeapi.co/api/v2/pokemon/";
 
-  return dataResponse.results;
+const getPokemons = async (idPokemonUser: number): Promise<string> => {
+  const response = await fetch(`${urlApi}${idPokemonUser}`);
+  const dataResponse = (await response.json()) as PokemonInfoStructure;
+
+  return dataResponse.sprites.other["official-artwork"].front_default;
 };
 
 export default getPokemons;
